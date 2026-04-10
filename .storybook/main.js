@@ -19,7 +19,6 @@ const config = {
     { from: '../css',          to: '/css' },
     { from: '../js',           to: '/js' },
     { from: '../src/tokens',   to: '/src/tokens' },
-    { from: '../assets',       to: '/assets' },
   ],
 };
 export default config;

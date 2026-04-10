@@ -36,6 +36,8 @@ jobs:
 
       - name: Build Storybook
         run: npm run build-storybook -- --output-dir dist/storybook
+        env:
+          CI: true
 
       - name: Copy landing to dist root
         run: |
