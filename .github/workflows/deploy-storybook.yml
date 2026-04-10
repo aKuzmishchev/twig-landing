@@ -31,17 +31,20 @@ jobs:
       - name: Build design tokens
         run: npm run build:tokens
 
+      - name: Prepare landing.html for Storybook staticDirs
+        run: cp index.html landing.html
+
       - name: Build Storybook
         run: npm run build-storybook -- --output-dir dist/storybook
 
-      - name: Copy landing page to dist/
+      - name: Copy landing to dist root
         run: |
           cp index.html dist/index.html
           cp -r css dist/css
           cp -r js dist/js
+          mkdir -p dist/src
           cp -r src/tokens dist/src/tokens
-          mkdir -p dist/assets
-          cp -r assets/. dist/assets/ 2>/dev/null || true
+          [ -d assets ] && cp -r assets dist/assets || true
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
