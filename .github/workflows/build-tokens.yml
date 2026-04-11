@@ -2,6 +2,7 @@ name: Build Design Tokens
 
 on:
   push:
+    branches: [main, tokens]
     paths:
       - 'tokens/**'
   workflow_dispatch:
@@ -26,13 +27,29 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Build tokens
         run: npm run build:tokens
 
-      - name: Commit generated CSS
+      - name: Commit generated CSS/JS
         uses: stefanzweifel/git-auto-commit-action@v7
         with:
           commit_message: 'chore: rebuild design tokens [skip ci]'
           file_pattern: 'src/tokens/*.css src/tokens/*.js'
+
+      - name: Open PR to main
+        if: github.ref == 'refs/heads/tokens'
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          base: main
+          branch: tokens
+          title: 'design: update tokens from Figma'
+          body: |
+            Automated PR from Token Studio (Figma).
+
+            Changes in `tokens/tokens.json` → rebuilt `src/tokens/tokens.css` and `src/tokens/tokens.js`.
+
+            Review token changes before merging to main.
+          labels: design-tokens
