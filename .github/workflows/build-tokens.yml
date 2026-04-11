@@ -35,12 +35,6 @@ jobs:
       - name: Build tokens
         run: npm run build:tokens
 
-      - name: Commit generated CSS/JS
-        uses: stefanzweifel/git-auto-commit-action@v7
-        with:
-          commit_message: 'chore: rebuild design tokens [skip ci]'
-          file_pattern: 'src/tokens/*.css src/tokens/*.js'
-
       - name: Open PR to main
         if: github.ref == 'refs/heads/tokens'
         env:
