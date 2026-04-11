@@ -4,13 +4,22 @@ import fs from 'fs';
 
 register(StyleDictionary);
 
+// tokens-studio group has both name/kebab and name/camel (camel wins as last).
+// Register a CSS variant that drops name/camel so kebab-case is used.
+const sd0 = new StyleDictionary({ tokens: {}, platforms: {} });
+await sd0.hasInitialized;
+const tsTransforms = sd0.hooks.transformGroups['tokens-studio'];
+const cssTransforms = tsTransforms.filter(t => t !== 'name/camel');
+
+StyleDictionary.registerTransformGroup({ name: 'tokens-studio/css', transforms: cssTransforms });
+
 // Read Token Studio tokens.json
 const raw = JSON.parse(fs.readFileSync('tokens/tokens.json', 'utf-8'));
 const setOrder = raw.$metadata?.tokenSetOrder ?? [];
 
 // Figma-synced sets (non-legacy) take priority; skip text-string sets
 const LEGACY = new Set(['primitives', 'semantic', 'component', 'spacing', 'radius']);
-const SKIP_TYPES = new Set(['twigTexts/Mode']); // text strings, not design tokens
+const SKIP_TYPES = new Set(['twigTexts/Mode']);
 const figmaSets = setOrder.filter(k => raw[k] && !LEGACY.has(k) && !SKIP_TYPES.has(k));
 const legacySets = [...LEGACY].filter(k => raw[k]);
 const activeSets = figmaSets.length > 0 ? figmaSets : legacySets;
@@ -26,7 +35,7 @@ const sd = new StyleDictionary({
   preprocessors: ['tokens-studio'],
   platforms: {
     css: {
-      transformGroup: 'tokens-studio',
+      transformGroup: 'tokens-studio/css',
       prefix: 'twig',
       buildPath: 'src/tokens/',
       files: [

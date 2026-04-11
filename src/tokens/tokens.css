@@ -3,71 +3,132 @@
  */
 
 :root {
-  --twigPrimitivesPurple50: #FAF7FF; /** Purple Tint — lightest surface */
-  --twigPrimitivesPurple100: #F0E9FB; /** Purple Light — subtle bg */
-  --twigPrimitivesPurple600: #7C35EB; /** Hover / dark mode */
-  --twigPrimitivesPurple700: #6D28D9; /** Purple Heart — main brand */
-  --twigPrimitivesPurple800: #4E22B0;
-  --twigPrimitivesPurple900: #3B1A8A; /** Purple darkest */
-  --twigPrimitivesNeutral0: #FFFFFF; /** Pure White */
-  --twigPrimitivesNeutral50: #FCFCFC; /** Alabaster */
-  --twigPrimitivesNeutral100: #F7F8FA; /** Shatlevka — page bg */
-  --twigPrimitivesNeutral200: #EBEBEB; /** Warm Gray — borders */
-  --twigPrimitivesNeutral400: #AEAEAE; /** Soft Gray — disabled */
-  --twigPrimitivesNeutral600: #717182; /** Storm Gray — secondary text */
-  --twigPrimitivesNeutral800: #1E1E1E; /** PopUp Gray */
-  --twigPrimitivesNeutral950: #0A0A0A; /** Cod Gray — primary text */
-  --twigPrimitivesGreen100: #DCFCE7; /** Persian Light — success bg */
-  --twigPrimitivesGreen700: #009689; /** Persian Green — success */
-  --twigPrimitivesOrange100: #FFEDD4; /** California Light — warning bg */
-  --twigPrimitivesOrange500: #FE9A00; /** California — warning */
-  --twigPrimitivesRed100: #FFDDDB; /** Vermilion Light — error bg */
-  --twigPrimitivesRed600: #F54900; /** Vermilion — error */
-  --twigSemanticColorBrandDefault: #6D28D9;
-  --twigSemanticColorBrandHover: #7C35EB;
-  --twigSemanticColorBrandSubtle: #F0E9FB;
-  --twigSemanticColorBgPage: #F7F8FA;
-  --twigSemanticColorBgSurface: #FFFFFF;
-  --twigSemanticColorBgOverlay: #1E1E1E;
-  --twigSemanticColorTextPrimary: #0A0A0A;
-  --twigSemanticColorTextSecondary: #717182;
-  --twigSemanticColorTextDisabled: #AEAEAE;
-  --twigSemanticColorTextInverse: #FCFCFC;
-  --twigSemanticColorTextBrand: #6D28D9;
-  --twigSemanticColorBorderDefault: #EBEBEB;
-  --twigSemanticColorBorderBrand: #6D28D9;
-  --twigSemanticColorBorderFocus: #7C35EB;
-  --twigSemanticColorStatusSuccess: #009689;
-  --twigSemanticColorStatusSuccessSubtle: #DCFCE7;
-  --twigSemanticColorStatusWarning: #FE9A00;
-  --twigSemanticColorStatusWarningSubtle: #FFEDD4;
-  --twigSemanticColorStatusError: #F54900;
-  --twigSemanticColorStatusErrorSubtle: #FFDDDB;
-  --twigComponentButtonPrimaryBg: #6D28D9;
-  --twigComponentButtonPrimaryBgHover: #7C35EB;
-  --twigComponentButtonPrimaryText: #FCFCFC;
-  --twigComponentButtonSecondaryBg: #FFFFFF;
-  --twigComponentButtonSecondaryBgHover: #F0E9FB;
-  --twigComponentButtonSecondaryText: #6D28D9;
-  --twigComponentButtonSecondaryBorder: #EBEBEB;
-  --twigComponentButtonSecondaryBorderHover: #6D28D9;
-  --twigComponentButtonGhostBg: #F7F8FA;
-  --twigComponentButtonGhostBgHover: #F0E9FB;
-  --twigComponentButtonGhostText: #6D28D9;
-  --twigComponentButtonDisabledText: #AEAEAE;
-  --twigComponentButtonDisabledBorder: #EBEBEB;
-  --twigSpacing1: 4;
-  --twigSpacing2: 8;
-  --twigSpacing3: 12;
-  --twigSpacing4: 16;
-  --twigSpacing5: 20;
-  --twigSpacing6: 24;
-  --twigSpacing8: 32;
-  --twigSpacing10: 40;
-  --twigSpacing12: 48;
-  --twigRadiusSm: 4;
-  --twigRadiusMd: 8;
-  --twigRadiusLg: 12;
-  --twigRadiusXl: 16;
-  --twigRadiusFull: 999;
+  --twig-twig-ds-pure-white: #ffffff;
+  --twig-twig-ds-alabaster-text: #fcfcfc;
+  --twig-twig-ds-shatlevka-bg: #f7f8fa;
+  --twig-twig-ds-warm-gray: #ebebeb;
+  --twig-twig-ds-soft-gray: #aeaeae;
+  --twig-twig-ds-storm-gray: #717182;
+  --twig-twig-ds-pop-up-gray: #1e1e1e;
+  --twig-twig-ds-cod-gray: #0a0a0a;
+  --twig-twig-ds-purple-heart: #6d28d9;
+  --twig-twig-ds-purple-darkmode: #7c35eb;
+  --twig-twig-ds-purple-light: #f0e9fb;
+  --twig-twig-ds-persian-green: #009689;
+  --twig-twig-ds-persian-light: #dcfce7;
+  --twig-twig-ds-california: #fe9a00;
+  --twig-twig-ds-california-light: #ffedd4;
+  --twig-twig-ds-vermilion: #f54900;
+  --twig-twig-ds-vermilion-light: #ffdddb;
+  --twig-twig-ds-chat-user-main: 400 16px/22 Inter;
+  --twig-twig-ds-chat-placeholder: 400 14px/18 Inter;
+  --twig-twig-ds-inter-regular: 400 10px/15 Inter;
+  --twig-twig-ds-inter-medium: 500 12px/18 Inter;
+  --twig-twig-ds-inter-semi-bold: 600 32px/38 Inter;
+  --twig-twig-ds-inter-extra-bold: 800 28px/36 Inter;
+  --twig-twig-grph-colors-yellow: #fdd835;
+  --twig-twig-grph-colors-pink: #ec407a;
+  --twig-twig-grph-colors-blue: #42a5f5;
+  --twig-twig-grph-colors-green-soft: #9ccc65;
+  --twig-twig-grph-colors-silver: #b0bec5;
+  --twig-font-families-inter: Inter;
+  --twig-line-heights-0: 22;
+  --twig-line-heights-1: 18;
+  --twig-line-heights-2: 15;
+  --twig-line-heights-3: 16;
+  --twig-line-heights-4: 21;
+  --twig-line-heights-5: 24;
+  --twig-line-heights-6: 18;
+  --twig-line-heights-7: 21;
+  --twig-line-heights-8: 24;
+  --twig-line-heights-9: 27;
+  --twig-line-heights-10: 30;
+  --twig-line-heights-11: 38;
+  --twig-line-heights-12: 36;
+  --twig-font-weights-inter-0: 400;
+  --twig-font-weights-inter-1: 500;
+  --twig-font-weights-inter-2: 600;
+  --twig-font-weights-inter-3: 800;
+  --twig-font-size-0: 10px;
+  --twig-font-size-1: 12px;
+  --twig-font-size-2: 14px;
+  --twig-font-size-3: 16px;
+  --twig-font-size-4: 18px;
+  --twig-font-size-5: 20px;
+  --twig-font-size-6: 28px;
+  --twig-font-size-7: 32px;
+  --twig-letter-spacing-0: -0.04em;
+  --twig-letter-spacing-1: 0;
+  --twig-paragraph-spacing-0: 0;
+  --twig-text-case-none: none;
+  --twig-text-decoration-none: none;
+  --twig-paragraph-indent-0: 0;
+  --twig-purple-50: #faf7ff;
+  --twig-purple-100: #f0e9fb;
+  --twig-purple-600: #7c35eb;
+  --twig-purple-700: #6d28d9;
+  --twig-purple-800: #4e22b0;
+  --twig-purple-900: #3b1a8a;
+  --twig-neutral-0: #ffffff;
+  --twig-neutral-50: #fcfcfc;
+  --twig-neutral-100: #f7f8fa;
+  --twig-neutral-200: #ebebeb;
+  --twig-neutral-400: #aeaeae;
+  --twig-neutral-600: #717182;
+  --twig-neutral-800: #1e1e1e;
+  --twig-neutral-950: #0a0a0a;
+  --twig-green-100: #dcfce7;
+  --twig-green-700: #009689;
+  --twig-orange-100: #ffedd4;
+  --twig-orange-500: #fe9a00;
+  --twig-red-100: #ffdddb;
+  --twig-red-600: #f54900;
+  --twig-color-brand-default: #009689;
+  --twig-color-brand-hover: #7c35eb;
+  --twig-color-brand-subtle: #f0e9fb;
+  --twig-color-bg-page: #f7f8fa;
+  --twig-color-bg-surface: #ffffff;
+  --twig-color-bg-elevated: #ffffff;
+  --twig-color-bg-overlay: #1e1e1e;
+  --twig-color-text-primary: #0a0a0a;
+  --twig-color-text-secondary: #717182;
+  --twig-color-text-disabled: #aeaeae;
+  --twig-color-text-inverse: #fcfcfc;
+  --twig-color-text-brand: #6d28d9;
+  --twig-color-border-default: #ebebeb;
+  --twig-color-border-brand: #6d28d9;
+  --twig-color-border-focus: #7c35eb;
+  --twig-color-status-success: #009689;
+  --twig-color-status-success-subtle: #dcfce7;
+  --twig-color-status-warning: #fe9a00;
+  --twig-color-status-warning-subtle: #ffedd4;
+  --twig-color-status-error: #f54900;
+  --twig-color-status-error-subtle: #ffdddb;
+  --twig-button-primary-bg: #009689;
+  --twig-button-primary-bg-hover: #7c35eb;
+  --twig-button-primary-text: #fcfcfc;
+  --twig-button-secondary-bg: #ffffff;
+  --twig-button-secondary-bg-hover: #f0e9fb;
+  --twig-button-secondary-text: #6d28d9;
+  --twig-button-secondary-border: #ebebeb;
+  --twig-button-secondary-border-hover: #6d28d9;
+  --twig-button-ghost-bg: #f7f8fa;
+  --twig-button-ghost-bg-hover: #f0e9fb;
+  --twig-button-ghost-text: #6d28d9;
+  --twig-button-disabled-text: #aeaeae;
+  --twig-button-disabled-border: #ebebeb;
+  --twig-spacing-1: 4;
+  --twig-spacing-2: 8;
+  --twig-spacing-3: 12;
+  --twig-spacing-4: 16;
+  --twig-spacing-5: 20;
+  --twig-spacing-6: 24;
+  --twig-spacing-8: 32;
+  --twig-spacing-10: 40;
+  --twig-spacing-12: 48;
+  --twig-radius-sm: 4;
+  --twig-radius-md: 8;
+  --twig-radius-lg: 12;
+  --twig-radius-xl: 16;
+  --twig-radius-full: 999;
 }

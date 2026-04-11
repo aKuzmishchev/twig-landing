@@ -7,17 +7,17 @@
 
 /* ─── TOKENS ─────────────────────────────────────────────── */
 :root {
-  --c-primary:       var(--twig-primitives-purple-700);
-  --c-primary-hover: var(--twig-primitives-purple-600);
-  --c-primary-light: var(--twig-primitives-purple-100);
-  --c-white:         var(--twig-primitives-neutral-0);
-  --c-alabaster:     var(--twig-primitives-neutral-50);
-  --c-bg:            var(--twig-primitives-neutral-100);
-  --c-warm-gray:     var(--twig-primitives-neutral-200);
-  --c-soft-gray:     var(--twig-primitives-neutral-400);
-  --c-storm-gray:    var(--twig-primitives-neutral-600);
-  --c-text:          var(--twig-primitives-neutral-950);
-  --c-success:       var(--twig-primitives-green-700);
+  --c-primary:       var(--twig-color-brand-default);
+  --c-primary-hover: var(--twig-color-brand-hover);
+  --c-primary-light: var(--twig-color-brand-subtle);
+  --c-white:         var(--twig-color-bg-surface);
+  --c-alabaster:     var(--twig-color-text-inverse);
+  --c-bg:            var(--twig-color-bg-page);
+  --c-warm-gray:     var(--twig-color-border-default);
+  --c-soft-gray:     var(--twig-color-text-disabled);
+  --c-storm-gray:    var(--twig-color-text-secondary);
+  --c-text:          var(--twig-color-text-primary);
+  --c-success:       var(--twig-color-status-success);
 
   --font:            'Inter', sans-serif;
 
@@ -605,9 +605,9 @@ ul { list-style: none; }
   padding: 2px 8px;
   border-radius: 100px;
 }
-.p-card__badge--green  { background: var(--twig-primitives-green-100); color: var(--twig-primitives-green-700); }
+.p-card__badge--green  { background: var(--twig-color-status-success-subtle); color: var(--twig-color-status-success); }
 .p-card__badge--purple { background: var(--c-primary-light); color: var(--c-primary); }
-.p-card__badge--red    { background: var(--twig-primitives-red-100); color: var(--twig-primitives-red-600); }
+.p-card__badge--red    { background: var(--twig-color-status-error-subtle); color: var(--twig-color-status-error); }
 
 /* Pillar 1: Revenue chart */
 .p-card__value {
@@ -696,14 +696,14 @@ ul { list-style: none; }
 
 /* Pillar 4: Alert card */
 .p-card--alert {
-  border-color: var(--twig-primitives-red-100);
+  border-color: var(--twig-color-status-error-subtle);
   background: #FFFAF9;
 }
 .p-card__alert-title {
   display: flex;
   align-items: center;
   gap: 6px;
-  color: var(--twig-primitives-red-600);
+  color: var(--twig-color-status-error);
 }
 .p-card__alert-desc {
   font-size: 14px;
@@ -714,7 +714,7 @@ ul { list-style: none; }
   padding: var(--sp-3) var(--sp-4);
   background: var(--c-white);
   border-radius: var(--r-sm);
-  border: 1px solid var(--twig-primitives-red-100);
+  border: 1px solid var(--twig-color-status-error-subtle);
 }
 
 /* Feature tags below the card */
