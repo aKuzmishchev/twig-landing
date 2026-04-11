@@ -43,16 +43,20 @@ jobs:
 
       - name: Open PR to main
         if: github.ref == 'refs/heads/tokens'
-        uses: peter-evans/create-pull-request@v7
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          base: main
-          branch: tokens
-          title: 'design: update tokens from Figma'
-          body: |
-            Automated PR from Token Studio (Figma).
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          EXISTING=$(gh pr list --base main --head tokens --state open --json number --jq '.[0].number')
+          if [ -z "$EXISTING" ]; then
+            gh pr create \
+              --base main \
+              --head tokens \
+              --title "design: update tokens from Figma" \
+              --body "Automated PR from Token Studio (Figma).
 
-            Changes in `tokens/tokens.json` → rebuilt `src/tokens/tokens.css` and `src/tokens/tokens.js`.
+          Changes in \`tokens/tokens.json\` → rebuilt \`src/tokens/tokens.css\` and \`src/tokens/tokens.js\`.
 
-            Review token changes before merging to main.
-          labels: design-tokens
+          Review token changes before merging to main."
+          else
+            echo "PR #$EXISTING already open, skipping."
+          fi
