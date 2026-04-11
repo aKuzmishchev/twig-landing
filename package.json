@@ -16,8 +16,9 @@
     "@storybook/html": "^8.6.18",
     "@storybook/html-vite": "^8.6.18",
     "@storybook/test": "^8.6.18",
+    "@tokens-studio/sd-transforms": "^2.0.3",
     "nodemon": "^3.1.0",
     "storybook": "^8.6.18",
-    "style-dictionary": "^4.3.0"
+    "style-dictionary": "^5.4.0"
   }
 }

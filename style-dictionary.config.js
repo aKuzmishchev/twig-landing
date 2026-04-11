@@ -1,10 +1,14 @@
 import StyleDictionary from 'style-dictionary';
+import { register, permutateThemes } from '@tokens-studio/sd-transforms';
+
+register(StyleDictionary);
 
 const sd = new StyleDictionary({
   source: ['tokens/tokens.json'],
+  preprocessors: ['tokens-studio'],
   platforms: {
     css: {
-      transformGroup: 'css',
+      transformGroup: 'tokens-studio',
       prefix: 'twig',
       buildPath: 'src/tokens/',
       files: [
@@ -19,7 +23,7 @@ const sd = new StyleDictionary({
       ]
     },
     js: {
-      transformGroup: 'js',
+      transformGroup: 'tokens-studio',
       buildPath: 'src/tokens/',
       files: [
         {
@@ -31,4 +35,4 @@ const sd = new StyleDictionary({
   }
 });
 
-sd.buildAllPlatforms();
+await sd.buildAllPlatforms();
