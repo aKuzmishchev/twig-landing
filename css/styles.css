@@ -74,7 +74,7 @@ ul { list-style: none; }
 }
 .btn--primary:hover {
   background: var(--c-primary-hover);
-  box-shadow: 0 4px 20px rgba(109,40,217,.28);
+  box-shadow: 0 4px 20px color-mix(in srgb, var(--twig-color-brand-default) 28%, transparent);
 }
 .btn--secondary {
   background: transparent;
@@ -296,14 +296,14 @@ ul { list-style: none; }
 .hero__deco-circle--1 {
   width: 700px;
   height: 700px;
-  background: radial-gradient(circle, rgba(109,40,217,.07) 0%, transparent 70%);
+  background: radial-gradient(circle, color-mix(in srgb, var(--twig-color-brand-default) 7%, transparent) 0%, transparent 70%);
   top: -250px;
   right: -150px;
 }
 .hero__deco-circle--2 {
   width: 500px;
   height: 500px;
-  background: radial-gradient(circle, rgba(109,40,217,.05) 0%, transparent 70%);
+  background: radial-gradient(circle, color-mix(in srgb, var(--twig-color-brand-default) 5%, transparent) 0%, transparent 70%);
   bottom: -150px;
   left: 5%;
 }
@@ -571,7 +571,7 @@ ul { list-style: none; }
   transform: translateY(-60%);
   font-size: 180px;
   font-weight: 800;
-  color: rgba(109,40,217,.04);
+  color: color-mix(in srgb, var(--twig-color-brand-default) 4%, transparent);
   line-height: 1;
   pointer-events: none;
   user-select: none;
@@ -697,7 +697,7 @@ ul { list-style: none; }
 /* Pillar 4: Alert card */
 .p-card--alert {
   border-color: var(--twig-color-status-error-subtle);
-  background: #FFFAF9;
+  background: color-mix(in srgb, var(--twig-color-status-error-subtle) 20%, var(--twig-color-bg-surface));
 }
 .p-card__alert-title {
   display: flex;
@@ -844,7 +844,7 @@ ul { list-style: none; }
   border-radius: 20px;
   padding: var(--sp-16) var(--sp-12);
   text-align: center;
-  box-shadow: 0 4px 32px rgba(109,40,217,.08);
+  box-shadow: 0 4px 32px color-mix(in srgb, var(--twig-color-brand-default) 8%, transparent);
 }
 .cta-section__heading {
   font-size: clamp(28px, 3.5vw, 44px);

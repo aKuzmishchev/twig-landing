@@ -23,7 +23,7 @@ export const SpacingScale = {
       <div style="display:flex;align-items:center;gap:24px;padding:10px 0;border-bottom:1px solid #f0f0f0;">
         <div style="width:80px;font-size:12px;font-weight:600;color:#111;">${name}</div>
         <div style="width:48px;font-size:12px;color:#888;">${value}</div>
-        <div style="width:${value};height:${value};min-width:4px;min-height:4px;background:#6D28D9;border-radius:2px;opacity:.7;"></div>
+        <div style="width:${value};height:${value};min-width:4px;min-height:4px;background:var(--twig-color-brand-default);border-radius:2px;opacity:.7;"></div>
         <div style="font-size:11px;color:#bbb;">${varName}</div>
       </div>`).join('');
     return el;
@@ -41,7 +41,7 @@ export const BorderRadius = {
       ['Pill', '100px', '100px'],
     ].map(([name, value, varName]) => `
       <div style="text-align:center;">
-        <div style="width:80px;height:80px;background:#F0E9FB;border:2px solid #6D28D9;border-radius:${value};margin-bottom:10px;"></div>
+        <div style="width:80px;height:80px;background:var(--twig-color-brand-subtle);border:2px solid var(--twig-color-brand-default);border-radius:${value};margin-bottom:10px;"></div>
         <div style="font-size:12px;font-weight:600;color:#111;">${name}</div>
         <div style="font-size:11px;color:#888;">${value}</div>
         <div style="font-size:11px;color:#bbb;">${varName}</div>

@@ -20,7 +20,7 @@ export default {
 
 const render = ({ label, heading, sub, align, theme }) => {
   const wrap = document.createElement('div');
-  wrap.style.cssText = 'padding:40px;' + (theme === 'dark' ? 'background:#6D28D9;' : 'background:#fff;');
+  wrap.style.cssText = 'padding:40px;' + (theme === 'dark' ? 'background:var(--twig-color-brand-default);' : 'background:var(--twig-color-bg-surface);');
   const cls = 'section-intro' + (align === 'center' ? ' section-intro--center' : '');
   wrap.innerHTML = `
     <div class="${cls}">

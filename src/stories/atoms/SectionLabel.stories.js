@@ -11,7 +11,7 @@ export default {
 const render = ({ label, variant }) => {
   const wrap = document.createElement('div');
   wrap.style.padding = '24px';
-  if (variant === 'light') wrap.style.background = '#6D28D9';
+  if (variant === 'light') wrap.style.background = 'var(--twig-color-brand-default)';
   const el = document.createElement('span');
   el.className = 'section-label' + (variant === 'light' ? ' section-label--light' : '') + (variant === 'small' ? ' section-label--sm' : '');
   el.textContent = label;

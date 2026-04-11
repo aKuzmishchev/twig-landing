@@ -23,7 +23,7 @@ export const TypeScale = {
       row('Body Large (Hero sub)', 'font-size:20px;font-weight:500;line-height:30px;color:#6B7280;', 'Twig unifies your restaurant data into an AI layer that acts — not just reports.'),
       row('Body', 'font-size:16px;font-weight:400;line-height:24px;color:#6B7280;', 'Fragmented systems, invisible losses, and operational inefficiencies hit directly where it hurts most.'),
       row('Body Small', 'font-size:14px;font-weight:400;line-height:21px;color:#6B7280;', 'Plug in your existing POS, inventory, and finance systems in minutes.'),
-      row('Label (Section)', 'font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#6D28D9;', 'How it works'),
+      row('Label (Section)', 'font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--twig-color-brand-default);', 'How it works'),
       row('Label Small', 'font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#AEAEAE;', '01'),
       row('Caption / Source', 'font-size:11px;font-weight:500;letter-spacing:.02em;color:#AEAEAE;', 'Toast, 2025'),
     ].join('');
