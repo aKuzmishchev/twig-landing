@@ -5,6 +5,7 @@ on:
     branches: [main, tokens]
     paths:
       - 'tokens/**'
+      - 'style-dictionary.config.js'
   workflow_dispatch:
 
 env:
